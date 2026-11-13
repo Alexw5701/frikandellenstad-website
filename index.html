@@ -57,6 +57,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 </style>
+  <link rel="stylesheet" href="stripfiguur.css">
   <title>Frikandellenstad – Waar iedereen speciaal is!</title>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Frikandellenstad","url":"https://frikandellenstad.nl/","description":"Een fictieve humoristische stripstad met een plattegrond geïnspireerd op Helmond."}</script>
   
@@ -229,6 +230,7 @@
           <article class="resident-card resident-c"><div class="resident-figure"><span class="resident-top" aria-hidden="true">👑</span><span class="resident-avatar" aria-hidden="true">🧅</span><span class="resident-squiggle" aria-hidden="true">✦</span></div><div class="resident-content"><span class="resident-role">DE STADSDICHTER</span><h3>Baron van Uitjes</h3><p>Een man van vele laagjes. Kan zomaar gaan huilen om een mooie frikandel.</p><span class="resident-quote">“Dat raakt mijn kern.”</span></div></article>
           <article class="resident-card resident-d"><div class="resident-figure"><span class="resident-top" aria-hidden="true">📣</span><span class="resident-avatar" aria-hidden="true">🍟</span><span class="resident-squiggle" aria-hidden="true">✷</span></div><div class="resident-content"><span class="resident-role">DE STADSVERSLAGGEVER</span><h3>Frietje van Dijk</h3><p>Ruikt nieuws van kilometers afstand. Vooral als er een frituurpan aan staat.</p><span class="resident-quote">“Het is heet van de naald!”</span></div></article>
         </div>
+        <aside class="resident-invite"><div><h3>Jij hoort hier ook bij!</h3><p>Wil jij ook een getekend stripfiguur worden? In het inwonersatelier ontwerp je gratis jouw eigen frikandelpersonage en download je een persoonlijk snackpaspoort.</p></div><a href="#burgerzaken" class="btn btn-dark">🌭 Word stripfiguur ↗</a></aside>
       </div>
     </section>
 
@@ -258,10 +260,95 @@
     <section class="section passport-section shell" id="burgerzaken">
       <div class="passport-layout">
         <div class="passport-copy"><p class="section-kicker">06 / BURGERZAKEN • LOKET SPECIAAL</p><h2>Hé jij!<br><span>Word inwoner.</span></h2><p>Bij ons hoef je niet in te burgeren. Je mag meteen door naar de saus. Maak gratis je eigen, officiële onofficiële <strong>Snackpaspoort van Frikandellenstad</strong>.</p>
-          <form id="passport-form" class="passport-form"><label for="resident-name">Hoe mogen we je noemen?</label><input id="resident-name" name="resident-name" maxlength="30" autocomplete="nickname" placeholder="Bijv. Prinses Speciaal" required><label for="resident-sauce">Wat is jouw specialiteit?</label><select id="resident-sauce" name="resident-sauce"><option value="Curry + mayo + uitjes">Curry + mayo + uitjes (uiteraard)</option><option value="Alleen curry">Alleen curry (dapper)</option><option value="Alleen mayo">Alleen mayo (gezellig)</option><option value="Ketchup + mayo + uitjes">Ketchup + mayo + uitjes (rebel)</option><option value="Zonder saus">Zonder saus (we respecteren je)</option></select><button class="btn btn-dark passport-submit" type="submit">🎟️ Maak mijn snackpaspoort <span>↗</span></button></form>
-          <p class="privacy-note">🔒 Geen account, geen opslag en geen gegevens die naar ons worden verzonden. Je paspoort wordt alleen in je eigen browser gemaakt.</p>
+          
+          <ol class="passport-steps"><li>1. Kies je naam</li><li>2. Ontwerp je stripfiguur</li><li>3. Download je paspoort</li></ol>
+          <form id="passport-form" class="passport-form">
+            <label for="resident-name">Hoe heet jij in Frikandellenstad?</label>
+            <input id="resident-name" name="resident-name" maxlength="30" autocomplete="nickname" placeholder="Bijv. Krokante Kees" required>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="resident-wijk">In welke wijk woon jij?</label>
+                <select id="resident-wijk" name="resident-wijk">
+                  <option value="binnenstad">Speciaal Centrum</option>
+                  <option value="stiphout">Snackhout</option>
+                  <option value="warande">Sauswarande</option>
+                  <option value="noord">Uitjes-Noord</option>
+                  <option value="dierdonk">Dierdonk Deluxe</option>
+                  <option value="rijpelberg">Rijpel-Rol</option>
+                  <option value="oost">Curry-Oost</option>
+                  <option value="west">Mayo-West</option>
+                  <option value="hout">Houtse Haps</option>
+                  <option value="brandevoort">Brandeworst</option>
+                  <option value="industrie">Frituurboulevard</option>
+                  <option value="brouwhuis">Broodje Brouwhuis</option>
+                  <option value="bzob">BZOB-Snack</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="resident-look">Jouw stripstijl</label>
+                <select id="resident-look" name="resident-look">
+                  <option value="klassiek">Klassieke frikandel</option>
+                  <option value="feest">Feestbeest</option>
+                  <option value="chic">Sjieke snack</option>
+                  <option value="sport">Sportieve snack</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="resident-extra">Kies je kenmerk</label>
+                <select id="resident-extra" name="resident-extra">
+                  <option value="verrassing">Verras me!</option>
+                  <option value="bril">Ronde bril</option>
+                  <option value="snor">Snor</option>
+                  <option value="strik">Feeststrik</option>
+                  <option value="geen">Lekker naturel</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="resident-sauce">Jouw specialiteit</label>
+                <select id="resident-sauce" name="resident-sauce">
+                  <option value="Curry + mayo + uitjes">Curry + mayo + uitjes</option>
+                  <option value="Alleen curry">Alleen curry</option>
+                  <option value="Alleen mayo">Alleen mayo</option>
+                  <option value="Ketchup + mayo + uitjes">Ketchup + mayo + uitjes</option>
+                  <option value="Zonder saus">Zonder saus</option>
+                </select>
+              </div>
+            </div>
+            <label for="resident-motto">Jouw motto (optioneel)</label>
+            <input id="resident-motto" name="resident-motto" maxlength="44" placeholder="Bijv. Altijd lekker mezelf!">
+            <p class="form-tip">Je krijgt meteen een getekend personage in de stijl van onze stad. Niet met AI-foto's, maar met een unieke illustratie uit ons inwonersatelier.</p>
+            <button class="btn btn-dark passport-submit" type="submit">🌭 Maak mijn stripfiguur &amp; snackpaspoort <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="privacy-note">🔒 Je naam, keuzes en stripfiguur worden uitsluitend in je eigen browser verwerkt. We slaan niets op en plaatsen niets openbaar. Dit is een speels inwonerschap, geen echte inschrijving. Wil je jezelf terugzien in toekomstige strips? Bewaar en deel je afbeelding dan zelf.</p>
         </div>
-        <div class="passport-preview-wrap"><div class="passport-card" id="passport-card"><div class="passport-top"><strong>FRIKANDELLENSTAD</strong><span>★★★★★</span></div><div class="passport-middle"><div class="passport-avatar" aria-hidden="true">🌭</div><div><span>OFFICIEUS INWONERSBEWIJS</span><h3 id="passport-name">Jouw naam hier</h3><p id="passport-sauce">Curry + mayo + uitjes</p></div></div><div class="passport-bottom"><span>STATUS: <strong>BIJZONDER SPECIAAL</strong></span><span>GOEDGEKEURD DOOR BURGEMEESTER FRIK</span></div><div class="passport-seal" aria-hidden="true">✷<small>100%<br>SPECIAAL</small></div></div><p class="passport-hint" id="passport-hint" aria-live="polite">Vul je naam in en ontvang je eigen paspoort!</p><button id="passport-download" type="button" class="btn btn-outline" disabled>↓ Download mijn paspoort</button></div>
+        <div class="passport-preview-wrap">
+          <div class="passport-card" id="passport-card">
+            <div class="passport-top"><strong>FRIKANDELLENSTAD</strong><span>★★★★★</span></div>
+            <div class="passport-middle">
+              <div class="passport-avatar" id="passport-avatar-art" aria-label="Voorbeeld van jouw persoonlijke stripfiguur"></div>
+              <div class="passport-personal">
+                <span>OFFICIEUS INWONERSBEWIJS</span>
+                <h3 id="passport-name">Jouw naam hier</h3>
+                <div class="passport-location" id="passport-wijk">Speciaal Centrum</div>
+                <p id="passport-sauce">Curry + mayo + uitjes</p>
+                <div class="passport-quote" id="passport-motto">Waar iedereen speciaal is!</div>
+              </div>
+            </div>
+            <div class="passport-bottom">
+              <span>STATUS: <strong>BIJZONDER SPECIAAL</strong></span>
+              <span id="passport-code">FKS-0000000</span>
+            </div>
+            <div class="passport-seal" aria-hidden="true">✷<small>100%<br>SPECIAAL</small></div>
+          </div>
+          <p class="passport-hint" id="passport-hint" aria-live="polite">Maak je eigen stripfiguur en snackpaspoort!</p>
+          <div class="passport-actions">
+            <button id="avatar-download" type="button" class="btn btn-cream" disabled>↓ Download stripfiguur (PNG)</button>
+            <button id="passport-download" type="button" class="btn btn-outline" disabled>↓ Download snackpaspoort (PNG)</button>
+          </div>
+          <p class="passport-disclaimer">Alle figuren zijn automatisch opgebouwd uit onze eigen tekenonderdelen. Het is een fantasiepersonage, geen portret. Je afbeelding verschijnt niet vanzelf in de openbare inwonersgalerij of stripverhalen.</p>
+        </div>
       </div>
     </section>
 
@@ -317,12 +404,9 @@ for(const button of document.querySelectorAll('.news-open'))button.addEventListe
 function closeDialog(){if(typeof dialog.close==='function')dialog.close();else dialog.removeAttribute('open')}
 document.getElementById('dialog-close').addEventListener('click',closeDialog);document.getElementById('dialog-ok').addEventListener('click',closeDialog);dialog.addEventListener('click',e=>{if(e.target===dialog)closeDialog()});
 
-const passportForm=document.getElementById('passport-form');const passportName=document.getElementById('passport-name');const passportSauce=document.getElementById('passport-sauce');const passportHint=document.getElementById('passport-hint');const passportDownload=document.getElementById('passport-download');let readyPassport=null;
-passportForm.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('resident-name').value.trim().slice(0,30);const sauce=document.getElementById('resident-sauce').value;if(!name){document.getElementById('resident-name').focus();return}readyPassport={name,sauce};passportName.textContent=name;passportSauce.textContent=sauce;passportHint.textContent=`🥳 Gefeliciteerd ${name}! Je bent nu officieel onofficieel inwoner.`;passportDownload.disabled=false;document.getElementById('passport-card').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})});
-const xmlEscape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
-passportDownload.addEventListener('click',()=>{if(!readyPassport)return;const name=xmlEscape(readyPassport.name),sauce=xmlEscape(readyPassport.sauce);const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#ffe17b"/><rect x="25" y="25" width="1150" height="750" rx="42" fill="none" stroke="#27201b" stroke-width="17"/><rect x="55" y="55" width="1090" height="690" rx="30" fill="none" stroke="#b3793c" stroke-width="4" stroke-dasharray="13 12"/><text x="93" y="145" font-size="56" font-family="Arial,sans-serif" font-weight="900" fill="#27201b">FRIKANDELLENSTAD</text><text x="1095" y="145" text-anchor="end" font-size="46" fill="#e9533b">★★★★★</text><path d="M95 176H1100" stroke="#27201b" stroke-width="8"/><rect x="96" y="230" width="244" height="260" rx="35" fill="#fff2bb" stroke="#27201b" stroke-width="9"/><text x="215" y="402" font-size="135" text-anchor="middle">🌭</text><text x="387" y="271" font-size="29" font-family="Arial,sans-serif" font-weight="900" letter-spacing="4" fill="#87592f">OFFICIEUS INWONERSBEWIJS</text><text x="387" y="360" font-size="${name.length>21?39:53}" font-family="Arial,sans-serif" font-weight="900" fill="#27201b">${name}</text><text x="388" y="430" font-size="32" font-family="Arial,sans-serif" fill="#87592f">${sauce}</text><path d="M95 590H1100" stroke="#27201b" stroke-width="8"/><text x="98" y="645" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#27201b">STATUS: BIJZONDER SPECIAAL</text><text x="98" y="696" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#7c5831">WAAR IEDEREEN SPECIAAL IS!</text><circle cx="1000" cy="659" r="94" fill="none" stroke="#ce5135" stroke-width="8"/><text x="1000" y="647" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="900" fill="#b7432e">100%</text><text x="1000" y="681" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="900" fill="#b7432e">SPECIAAL</text></svg>`;const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='frikandellenstad-snackpaspoort.svg';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 document.getElementById('year').textContent=new Date().getFullYear();
 
 </script>
+<script src="stripfiguur.js" defer></script>
 </body>
 </html>
