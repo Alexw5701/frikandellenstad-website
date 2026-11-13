@@ -1,0 +1,42 @@
+/* Inwonersatelier – lokale, privacyvriendelijke stripfiguren. */
+.passport-steps{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px;padding:0;list-style:none}
+.passport-steps li{background:#fff9e9;border:2px solid #382b22;border-radius:50px;padding:7px 12px;font:800 11px var(--font-body)}
+.passport-steps li::first-letter{color:#bc4332}
+.passport-form select{margin-bottom:3px}
+.passport-form .form-tip{font-size:11px;font-weight:800;line-height:1.5;color:#805e43;margin:0 0 5px}
+.passport-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.passport-form .form-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.passport-form .form-field label{margin-top:6px}
+.passport-form .form-field select{width:100%;min-height:50px}
+.passport-avatar{width:118px;height:118px;background:#fffcf0;padding:0;overflow:hidden;transform:rotate(-3deg)}
+.passport-avatar svg{display:block;width:100%;height:100%}
+.passport-middle .passport-personal{display:flex;flex-direction:column;gap:4px;min-width:0}
+.passport-middle .passport-personal h3{margin:4px 0 0}
+.passport-personal .passport-location{font:900 11px var(--font-body);color:#87532e}
+.passport-personal .passport-quote{font:800 10px/1.4 var(--font-body);color:#805a3f;max-width:240px;overflow-wrap:anywhere}
+.passport-middle .passport-personal p{overflow-wrap:anywhere}
+.passport-card{min-height:320px;aspect-ratio:auto}
+.passport-bottom{max-width:100%;padding-right:72px}
+.passport-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.passport-actions .btn{font-size:12px;padding:12px 16px}
+.passport-preview-wrap .passport-actions .btn{width:auto}
+.passport-disclaimer{max-width:470px;text-align:center;font:800 11px/1.6 var(--font-body);color:#795b40;margin:13px 0 0}
+.resident-invite{margin-top:28px;padding:22px;background:#ffdf77;border:3px solid var(--ink);border-radius:21px;box-shadow:4px 5px 0 var(--ink);display:flex;align-items:center;justify-content:space-between;gap:22px}
+.resident-invite h3{font:700 23px var(--font-display);margin:0 0 8px}
+.resident-invite p{font:800 13px/1.6 var(--font-body);margin:0}
+.resident-invite .btn{flex-shrink:0}
+@media(max-width:760px){
+ .passport-form .form-row{grid-template-columns:1fr 1fr}
+ .passport-avatar{width:82px;height:82px}
+ .passport-card{min-height:285px}
+ .passport-personal .passport-quote{display:none}
+ .passport-bottom{padding-right:54px}
+ .resident-invite{flex-direction:column;align-items:stretch}
+ .resident-invite .btn{align-self:flex-start}
+}
+@media(max-width:390px){
+ .passport-form .form-row{grid-template-columns:1fr}
+ .passport-avatar{width:68px;height:68px}
+ .passport-bottom{font-size:7px}
+ .passport-top strong{font-size:10px}
+}
