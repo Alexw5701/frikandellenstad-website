@@ -65,6 +65,10 @@
 .resident-figure--portrait::before{display:none;}
 .resident-portrait{display:block;width:100%;height:100%;background-image:url("assets/vaste-personages.webp");background-size:400% 400%;background-repeat:no-repeat;background-position:var(--portrait-x) var(--portrait-y);transition:transform .2s ease;}
 .resident-card:hover .resident-portrait{transform:scale(1.04);}
+/* Opa en Oma Frikadel – portretten uit de vaste personagereeks. */
+.resident-family-portrait{display:block;width:100%;height:100%;background-image:url("assets/opa-oma-frikadel.svg");background-size:200% 100%;background-position:var(--family-x) center;background-repeat:no-repeat;transition:transform .2s ease}
+.resident-card:hover .resident-family-portrait{transform:scale(1.04)}
+
 @media(max-width:760px){.resident-figure--portrait{height:clamp(150px,36vw,207px);}}
 @media(prefers-reduced-motion:reduce){.resident-portrait{transition:none;}}
 
@@ -255,6 +259,9 @@
           <article class="resident-card"><div class="resident-figure resident-figure--portrait" role="img" aria-label="Stripportret van Oma Mosterd"><span class="resident-portrait" style="--portrait-x:33.3333%;--portrait-y:100.0000%"></span></div><div class="resident-content"><span class="resident-role">DE WIJZE OMA</span><h3>Oma Mosterd</h3><p>De oudste en wijste inwoner van Frikandellenstad. Ze weet nog precies hoe het vroeger ging.</p><span class="resident-quote">“Vroeger waren de frikandellen nog recht!”</span></div></article>
           <article class="resident-card"><div class="resident-figure resident-figure--portrait" role="img" aria-label="Stripportret van Mayo"><span class="resident-portrait" style="--portrait-x:66.6667%;--portrait-y:100.0000%"></span></div><div class="resident-content"><span class="resident-role">DE SIDEKICK</span><h3>Mayo</h3><p>Energieke sidekick en stuntmaat van Curry. Vrolijk, ondeugend en altijd in voor een nieuw plan.</p><span class="resident-quote">“Met een klodder mayo wordt alles leuker!”</span></div></article>
           <article class="resident-card"><div class="resident-figure resident-figure--portrait" role="img" aria-label="Stripportret van Curry"><span class="resident-portrait" style="--portrait-x:100.0000%;--portrait-y:100.0000%"></span></div><div class="resident-content"><span class="resident-role">DE SLIMME SIDEKICK</span><h3>Curry</h3><p>Slimme sidekick, uitvinder van snacksnufjes en beste vriend van Mayo. Creatief en enthousiast.</p><span class="resident-quote">“Een snufje curry maakt elk avontuur extra pittig!”</span></div></article>
+
+          <article class="resident-card" id="opa-frikadel"><div class="resident-figure resident-figure--portrait" role="img" aria-label="Stripportret van Opa Frikadel"><span class="resident-family-portrait" style="--family-x:0%"></span></div><div class="resident-content"><span class="resident-role">DE VERHALENVERTELLER</span><h3>Opa Frikadel</h3><p>De oudste verhalenverteller van de stad en wandelende snackencyclopedie. Goedlachs, eigenwijs en nostalgisch. Hij bewaart zijn geheime familierecept in zijn vest.</p><span class="resident-quote">“Vroeger was alles minder speciaal, maar wél met smaak!”</span></div></article>
+          <article class="resident-card" id="oma-frikadel"><div class="resident-figure resident-figure--portrait" role="img" aria-label="Stripportret van Oma Frikadel"><span class="resident-family-portrait" style="--family-x:100%"></span></div><div class="resident-content"><span class="resident-role">DE KEUKENBAAS</span><h3>Oma Frikadel</h3><p>De warme spil van de familie en de baas van Oma Frikadels Keuken. Hartelijk, pittig en onverstoorbaar, met altijd een houten lepel bij de hand.</p><span class="resident-quote">“Een beetje liefde, een snufje pit... en iedereen smult!”</span></div></article>
         </div>
         <aside class="resident-invite"><div><h3>Jij hoort hier ook bij!</h3><p>Wil jij ook een getekend stripfiguur worden? In het inwonersatelier ontwerp je gratis jouw eigen frikandelpersonage en download je een persoonlijk snackpaspoort.</p></div><a href="#burgerzaken" class="btn btn-dark">🌭 Word stripfiguur ↗</a></aside>
       </div>
